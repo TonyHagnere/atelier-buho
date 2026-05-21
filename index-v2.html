@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier BUHO · Tapissier décorateur à Paris 11ᵉ · Réfection et création sur mesure</title>
+  <meta name="description" content="Atelier de tapisserie décorateur à Paris 11ᵉ, rue Trousseau. Réfection traditionnelle de sièges, création sur mesure, rideaux et décoration couture. Savoir-faire artisanal pour particuliers et professionnels." />
+  <meta name="keywords" content="tapissier paris, tapissier décorateur paris 11, réfection fauteuil paris, restauration siège ancien, création sur mesure tapisserie, rideaux sur mesure paris, atelier tapisserie" />
+  <meta name="author" content="Atelier BUHO" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Atelier BUHO" />
+  <meta property="og:title" content="Atelier BUHO · Tapissier décorateur à Paris" />
+  <meta property="og:description" content="Atelier de tapisserie à Paris 11ᵉ. Réfection traditionnelle, création sur mesure, rideaux et décoration couture." />
+  <meta property="og:image" content="images/optimized/leopard-chair-detail.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Atelier BUHO · Tapissier décorateur à Paris" />
+  <meta name="twitter:description" content="Réfection traditionnelle, création sur mesure, rideaux et couture. Paris 11ᵉ." />
+  <meta name="twitter:image" content="images/optimized/leopard-chair-detail.jpg" />
+
+  <!-- Schema.org : LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://atelier-buho.com/#business",
+    "name": "Atelier BUHO",
+    "description": "Atelier de tapisserie décorateur à Paris 11ᵉ. Réfection traditionnelle, création sur mesure, rideaux et décoration couture.",
+    "url": "https://atelier-buho.com/",
+    "telephone": "+33609262759",
+    "email": "atelier.buho@gmail.com",
+    "image": "https://atelier-buho.com/images/optimized/leopard-chair-detail.jpg",
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "58 rue Trousseau",
+      "addressLocality": "Paris",
+      "postalCode": "75011",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "48.8538",
+      "longitude": "2.3795"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Lirayen Rojas-Diaz",
+      "jobTitle": "Tapissière décoratrice"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Paris"
+    },
+    "knowsAbout": [
+      "Tapisserie d'ameublement",
+      "Réfection de sièges anciens",
+      "Création de mobilier sur mesure",
+      "Rideaux sur mesure",
+      "Décoration textile"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================
+       BRAND TOKENS · Atelier BUHO
+       ============================================ */
+    :root {
+      /* Palette chromatique (charte octobre 2024) */
+      --sage: #5f6559;          /* Pantone 4193 C, primaire fond */
+      --sage-deep: #494e44;     /* Plus sombre, dérivé */
+      --olive-black: #333322;   /* Pantone Black 2C */
+      --cream: #ded8c6;         /* Pantone 7527 C */
+      --cream-light: #ece6d4;
+      --olive: #bcb794;         /* Pantone 453 C */
+      --sage-light: #85918a;    /* Pantone 4192 C */
+      --tan: #b58f60;           /* Pantone 6009 C, accent chaud */
+      --ink: #1f1f15;
+
+      /* Typo */
+      --font-display: 'Fraunces', 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+      --font-body: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Layout */
+      --max: 1440px;
+      --gutter: clamp(1.25rem, 4vw, 3rem);
+
+      /* Motion */
+      --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    /* ============================================
+       RESET
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--cream-light);
+      background: var(--sage);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    img, video { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    ::selection { background: var(--tan); color: var(--olive-black); }
+
+    /* ============================================
+       TYPOGRAPHY SYSTEM
+       ============================================ */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--olive);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 1.75rem;
+      height: 1px;
+      background: var(--olive);
+    }
+    .eyebrow.no-line::before { display: none; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -0.015em;
+    }
+
+    .display-xl {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7.5vw, 6.5rem);
+      font-weight: 300;
+      line-height: 0.96;
+      letter-spacing: -0.025em;
+      font-variation-settings: "opsz" 144;
+    }
+    .display-lg {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      font-variation-settings: "opsz" 120;
+    }
+    .display-md {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      font-variation-settings: "opsz" 60;
+    }
+    em, i {
+      font-style: italic;
+      font-variation-settings: "opsz" 144;
+    }
+
+    p { max-width: 64ch; }
+    .lead {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.5;
+      font-variation-settings: "opsz" 24;
+    }
+
+    /* ============================================
+       LAYOUT UTILITIES
+       ============================================ */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+    .section { position: relative; }
+    .section-pad { padding: clamp(5rem, 12vw, 9rem) 0; }
+    .grid { display: grid; gap: 2rem; }
+
+    /* ============================================
+       NAV
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.5rem var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s var(--ease), padding 0.3s var(--ease), border-color 0.4s var(--ease);
+      border-bottom: 1px solid transparent;
+      mix-blend-mode: normal;
+    }
+    .nav.scrolled {
+      background: rgba(236, 230, 212, 0.92);
+      backdrop-filter: blur(14px) saturate(120%);
+      -webkit-backdrop-filter: blur(14px) saturate(120%);
+      padding: 1rem var(--gutter);
+      border-color: rgba(51, 51, 34, 0.08);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
+    .nav-brand img {
+      height: 56px;
+      width: auto;
+      display: block;
+      transition: height 0.3s var(--ease), filter 0.4s var(--ease);
+    }
+    .nav.scrolled .nav-brand img {
+      height: 44px;
+      filter: brightness(0) saturate(100%) invert(11%) sepia(15%) saturate(630%) hue-rotate(35deg) brightness(95%) contrast(90%);
+    }
+    @media (max-width: 880px) {
+      .nav-brand img { height: 42px; }
+      .nav.scrolled .nav-brand img { height: 36px; }
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.25rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream-light);
+      position: relative;
+      padding: 0.5rem 0;
+      transition: color 0.3s var(--ease);
+    }
+    .nav.scrolled .nav-links a { color: var(--olive-black); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0.25rem;
+      width: 0;
+      height: 1px;
+      background: var(--olive);
+      transition: width 0.4s var(--ease, ease), background 0.3s var(--ease);
+    }
+    .nav.scrolled .nav-links a::after { background: var(--sage-deep); }
+    .nav-links a:hover { color: var(--olive); }
+    .nav.scrolled .nav-links a:hover { color: var(--tan); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.4rem;
+      border: 1px solid var(--cream-light);
+      border-radius: 999px;
+      color: var(--cream-light);
+      transition: all 0.3s var(--ease);
+    }
+    .nav-cta:hover {
+      background: var(--cream-light);
+      color: var(--sage-deep);
+    }
+    .nav.scrolled .nav-cta {
+      border-color: var(--sage-deep);
+      color: var(--sage-deep);
+    }
+    .nav.scrolled .nav-cta:hover {
+      background: var(--sage-deep);
+      color: var(--cream-light);
+    }
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--olive-black);
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      filter: brightness(0.65) saturate(1.1);
+      animation: heroZoom 18s var(--ease) forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.08); }
+      to { transform: scale(1); }
+    }
+    .hero-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(51, 51, 34, 0.5) 0%, transparent 30%, transparent 60%, rgba(51, 51, 34, 0.85) 100%),
+        radial-gradient(ellipse at 20% 80%, rgba(74, 79, 68, 0.35) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: clamp(5rem, 11vh, 8rem) var(--gutter) clamp(3rem, 7vh, 5rem);
+      max-width: var(--max);
+      margin: 0 auto;
+      width: 100%;
+      animation: heroFade 1.2s var(--ease) 0.3s backwards;
+    }
+    @keyframes heroFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content .eyebrow { color: var(--cream); }
+    .hero-content .eyebrow::before { background: var(--cream); }
+    .hero-content h1 {
+      margin: 1.5rem 0 1.75rem;
+      color: var(--cream-light);
+      max-width: 14ch;
+    }
+    .hero-content .lead {
+      color: var(--cream);
+      opacity: 0.92;
+      max-width: 42ch;
+      margin-bottom: 2.5rem;
+    }
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 1.1rem 2rem;
+      border-radius: 999px;
+      transition: all 0.35s var(--ease);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--cream-light);
+      color: var(--sage-deep);
+    }
+    .btn-primary:hover {
+      background: var(--olive);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.4);
+    }
+    .btn-ghost {
+      border: 1px solid var(--cream);
+      color: var(--cream-light);
+    }
+    .btn-ghost:hover {
+      background: rgba(222, 216, 198, 0.1);
+      border-color: var(--cream-light);
+    }
+    .btn .arrow {
+      display: inline-block;
+      transition: transform 0.3s var(--ease);
+    }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(180deg, transparent, var(--cream) 50%, transparent);
+      animation: scrollPulse 2.4s var(--ease) infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: translateX(-50%) scaleY(0.7); }
+      50% { opacity: 1; transform: translateX(-50%) scaleY(1); }
+    }
+
+    /* ============================================
+       MANIFESTO
+       ============================================ */
+    .manifesto {
+      background: var(--olive-black);
+      color: var(--cream-light);
+      padding: clamp(7rem, 16vw, 11rem) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(181, 143, 96, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(133, 145, 138, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 880px) {
+      .manifesto-grid { grid-template-columns: 1fr; }
+    }
+    .manifesto-quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.75rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+      font-variation-settings: "opsz" 120;
+    }
+    .manifesto-quote em {
+      color: var(--olive);
+      font-variation-settings: "opsz" 144;
+    }
+    .manifesto-text {
+      max-width: 46ch;
+    }
+    .manifesto-text .eyebrow { margin-bottom: 1.5rem; }
+    .manifesto-text p {
+      font-size: 1.02rem;
+      color: var(--cream);
+      opacity: 0.82;
+    }
+    .manifesto-text p + p { margin-top: 1.25rem; }
+
+    /* ============================================
+       SAVOIR-FAIRE
+       ============================================ */
+    .savoir-faire {
+      background: var(--cream);
+      color: var(--olive-black);
+      padding: clamp(6rem, 13vw, 10rem) 0;
+    }
+    .savoir-faire .section-header {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    @media (max-width: 880px) {
+      .savoir-faire .section-header { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    .savoir-faire h2 {
+      color: var(--olive-black);
+      max-width: 12ch;
+    }
+    .savoir-faire .section-header p {
+      color: var(--sage-deep);
+      font-size: 1.05rem;
+      max-width: 52ch;
+    }
+
+    .prestations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1rem, 2.5vw, 2rem);
+    }
+    @media (max-width: 880px) {
+      .prestations { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    .prestation {
+      position: relative;
+      cursor: pointer;
+    }
+    .prestation-img {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      background: var(--sage);
+      position: relative;
+    }
+    .prestation-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s var(--ease), filter 0.6s var(--ease);
+    }
+    .prestation:hover .prestation-img img {
+      transform: scale(1.06);
+      filter: brightness(1.05);
+    }
+    .prestation-number {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      mix-blend-mode: difference;
+      opacity: 0.9;
+    }
+    .prestation h3 {
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      color: var(--olive-black);
+      margin-bottom: 0.75rem;
+      font-variation-settings: "opsz" 40;
+    }
+    .prestation p {
+      color: var(--sage-deep);
+      font-size: 0.95rem;
+      max-width: 38ch;
+      margin-bottom: 1rem;
+    }
+    .prestation-link {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--olive-black);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--olive-black);
+      transition: all 0.3s var(--ease);
+    }
+    .prestation-link:hover {
+      color: var(--tan);
+      border-color: var(--tan);
+      gap: 0.8rem;
+    }
+
+    /* ============================================
+       RÉALISATIONS
+       ============================================ */
+    .realisations {
+      background: var(--sage);
+      padding: clamp(6rem, 13vw, 10rem) 0;
+      overflow: hidden;
+    }
+    .realisations .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .realisations h2 {
+      color: var(--cream-light);
+      max-width: 16ch;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 120px;
+      gap: 1rem;
+    }
+    @media (max-width: 880px) {
+      .gallery {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 100px;
+        gap: 0.75rem;
+      }
+    }
+    .gal-item {
+      position: relative;
+      overflow: hidden;
+      background: var(--sage-deep);
+      cursor: pointer;
+    }
+    .gal-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s var(--ease), filter 0.6s var(--ease);
+    }
+    .gal-item:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.08);
+    }
+    .gal-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(51,51,34,0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.4s var(--ease);
+      pointer-events: none;
+    }
+    .gal-item:hover::after { opacity: 1; }
+    .gal-caption {
+      position: absolute;
+      bottom: 1rem; left: 1rem; right: 1rem;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.4s var(--ease) 0.05s;
+      color: var(--cream-light);
+      pointer-events: none;
+    }
+    .gal-item:hover .gal-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gal-caption .cap-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 0.3rem;
+    }
+    .gal-caption .cap-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-style: italic;
+      font-variation-settings: "opsz" 36;
+    }
+
+    /* Asymmetric grid placement */
+    .gal-1 { grid-column: span 7; grid-row: span 4; }
+    .gal-2 { grid-column: span 5; grid-row: span 2; }
+    .gal-3 { grid-column: span 5; grid-row: span 2; }
+    .gal-4 { grid-column: span 4; grid-row: span 3; }
+    .gal-5 { grid-column: span 4; grid-row: span 3; }
+    .gal-6 { grid-column: span 4; grid-row: span 3; }
+    .gal-7 { grid-column: span 6; grid-row: span 2; }
+    .gal-8 { grid-column: span 6; grid-row: span 2; }
+    @media (max-width: 880px) {
+      .gal-1 { grid-column: span 6; grid-row: span 3; }
+      .gal-2 { grid-column: span 3; grid-row: span 2; }
+      .gal-3 { grid-column: span 3; grid-row: span 2; }
+      .gal-4 { grid-column: span 3; grid-row: span 2; }
+      .gal-5 { grid-column: span 3; grid-row: span 2; }
+      .gal-6 { grid-column: span 3; grid-row: span 2; }
+      .gal-7 { grid-column: span 3; grid-row: span 2; }
+      .gal-8 { grid-column: span 6; grid-row: span 2; }
+    }
+
+    .gallery-cta {
+      text-align: center;
+      margin-top: clamp(3rem, 6vw, 5rem);
+    }
+    .gallery-cta a {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--cream);
+      border-bottom: 1px solid var(--olive);
+      padding-bottom: 0.4rem;
+      transition: all 0.3s var(--ease);
+    }
+    .gallery-cta a:hover {
+      color: var(--olive);
+      border-color: var(--cream);
+    }
+
+    /* ============================================
+       ARTISAN
+       ============================================ */
+    .artisan {
+      background: var(--cream-light);
+      color: var(--olive-black);
+      padding: clamp(6rem, 13vw, 10rem) 0;
+    }
+    .artisan-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: clamp(2.5rem, 7vw, 6rem);
+      align-items: center;
+    }
+    @media (max-width: 880px) {
+      .artisan-grid { grid-template-columns: 1fr; }
+    }
+    .artisan-img {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+    }
+    .artisan-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.05);
+    }
+    .artisan-img::before {
+      content: '01';
+      position: absolute;
+      top: -1.5rem; left: -0.5rem;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 6rem;
+      color: var(--sage-deep);
+      z-index: 2;
+      font-variation-settings: "opsz" 144;
+      line-height: 1;
+    }
+    @media (max-width: 880px) {
+      .artisan-img::before { font-size: 4rem; top: -1rem; }
+    }
+    .artisan-text h2 {
+      color: var(--olive-black);
+      margin: 1.5rem 0 0.75rem;
+    }
+    .artisan-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+      font-weight: 300;
+      color: var(--sage-deep);
+      margin-bottom: 2rem !important;
+      max-width: none !important;
+      font-variation-settings: "opsz" 36;
+    }
+    .artisan-text p {
+      color: var(--sage-deep);
+      max-width: 50ch;
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+    }
+    .artisan-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.35rem;
+      line-height: 1.4;
+      color: var(--sage-deep);
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--olive);
+      margin: 2rem 0 2.5rem;
+      max-width: 42ch;
+      font-variation-settings: "opsz" 36;
+    }
+    .artisan-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--olive-black);
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--olive-black);
+      transition: all 0.3s var(--ease);
+    }
+    .artisan-link:hover {
+      color: var(--tan);
+      border-color: var(--tan);
+      gap: 0.8rem;
+    }
+
+    /* ============================================
+       VALEURS
+       ============================================ */
+    .valeurs {
+      background: var(--sage-deep);
+      padding: clamp(5rem, 11vw, 8rem) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .valeurs::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--olive), transparent);
+      opacity: 0.4;
+    }
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(2rem, 4vw, 4rem);
+    }
+    @media (max-width: 880px) {
+      .valeurs-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    .valeur {
+      text-align: left;
+    }
+    .valeur-num {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--olive);
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(188, 183, 148, 0.3);
+    }
+    .valeur h3 {
+      font-size: 1.45rem;
+      font-weight: 400;
+      color: var(--cream-light);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+      font-variation-settings: "opsz" 36;
+    }
+    .valeur p {
+      color: var(--cream);
+      opacity: 0.78;
+      font-size: 0.95rem;
+      max-width: 36ch;
+    }
+
+    /* ============================================
+       CONTACT / ATELIER
+       ============================================ */
+    .contact {
+      background: var(--cream);
+      color: var(--olive-black);
+      padding: clamp(6rem, 13vw, 10rem) 0;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: clamp(2.5rem, 6vw, 5rem);
+    }
+    @media (max-width: 880px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .contact-info h2 {
+      color: var(--olive-black);
+      margin: 1.5rem 0 2.5rem;
+      max-width: 14ch;
+    }
+    .info-list {
+      list-style: none;
+      margin-bottom: 0;
+    }
+    .info-item {
+      padding: 1.25rem 0;
+      border-top: 1px solid rgba(94, 101, 89, 0.2);
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 1rem;
+      align-items: baseline;
+    }
+    .info-item:last-child { border-bottom: 1px solid rgba(94, 101, 89, 0.2); }
+    .info-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--sage-deep);
+      opacity: 0.7;
+    }
+    .info-value {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--olive-black);
+      line-height: 1.4;
+      font-variation-settings: "opsz" 24;
+    }
+    .info-value a:hover { color: var(--tan); }
+    .info-value .small {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--sage-deep);
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    /* ============================================
+       ATELIER MAP (Paris SVG)
+       ============================================ */
+    .atelier-map {
+      position: relative;
+      width: 100%;
+      min-height: 380px;
+      background: var(--sage-deep);
+      overflow: hidden;
+      align-self: stretch;
+    }
+    .atelier-map svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    @media (max-width: 880px) {
+      .atelier-map {
+        margin-top: 2.5rem;
+        aspect-ratio: 600 / 500;
+        align-self: stretch;
+      }
+    }
+
+    /* ============================================
+       CONTACT FORM SECTION
+       ============================================ */
+    .form-section {
+      background: var(--sage-deep);
+      color: var(--cream-light);
+      padding: clamp(6rem, 13vw, 10rem) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .form-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--olive), transparent);
+      opacity: 0.3;
+    }
+    .form-section-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(3rem, 7vw, 6rem);
+      align-items: start;
+    }
+    @media (max-width: 880px) {
+      .form-section-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    .form-intro .eyebrow { color: var(--olive); }
+    .form-intro .eyebrow::before { background: var(--olive); }
+    .form-intro h2 {
+      color: var(--cream-light);
+      margin: 1.5rem 0 1.75rem;
+      max-width: 13ch;
+    }
+    .form-intro p {
+      color: var(--cream);
+      opacity: 0.78;
+      max-width: 38ch;
+      font-size: 1rem;
+    }
+
+    .form-wrap {
+      color: var(--cream-light);
+      position: relative;
+    }
+    .form-wrap .eyebrow { color: var(--olive); margin-bottom: 1rem; }
+    .form-wrap .eyebrow::before { background: var(--olive); }
+    .form-wrap h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      color: var(--cream-light);
+      margin-bottom: 2rem;
+      line-height: 1.15;
+      font-variation-settings: "opsz" 48;
+    }
+    .form-row { margin-bottom: 1.25rem; }
+    .form-row label {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 0.5rem;
+    }
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(222, 216, 198, 0.25);
+      padding: 0.6rem 0;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--cream-light);
+      transition: border-color 0.3s var(--ease);
+      outline: none;
+    }
+    .form-row textarea { resize: vertical; min-height: 90px; }
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      border-bottom-color: var(--olive);
+    }
+    .form-row input::placeholder,
+    .form-row textarea::placeholder {
+      color: rgba(222, 216, 198, 0.4);
+    }
+    .form-row select {
+      background-image: linear-gradient(45deg, transparent 50%, var(--cream-light) 50%),
+                        linear-gradient(135deg, var(--cream-light) 50%, transparent 50%);
+      background-position: calc(100% - 14px) 14px, calc(100% - 9px) 14px;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      appearance: none;
+      cursor: pointer;
+    }
+    .form-row select option { background: var(--sage-deep); color: var(--cream-light); }
+    .form-row-double {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 560px) {
+      .form-row-double { grid-template-columns: 1fr; gap: 0; }
+    }
+    .form-submit {
+      margin-top: 0.5rem;
+      width: 100%;
+      padding: 1.1rem;
+      background: var(--cream-light);
+      color: var(--sage-deep);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      transition: all 0.3s var(--ease);
+    }
+    .form-submit:hover {
+      background: var(--olive);
+      color: var(--olive-black);
+      transform: translateY(-2px);
+    }
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--cream);
+      opacity: 0.55;
+      margin-top: 1rem;
+      max-width: 40ch;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer {
+      background: var(--olive-black);
+      color: var(--cream);
+      padding: clamp(4rem, 8vw, 6rem) 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 880px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 560px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    .footer-brand .footer-logo {
+      width: clamp(160px, 14vw, 220px);
+      height: auto;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .footer-brand p {
+      color: var(--cream);
+      opacity: 0.65;
+      font-size: 0.9rem;
+      max-width: 32ch;
+    }
+    .footer-col h4 {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 1.5rem;
+      font-family: var(--font-body);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.65rem; }
+    .footer-col a {
+      font-size: 0.92rem;
+      color: var(--cream);
+      opacity: 0.78;
+      transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
+    }
+    .footer-col a:hover { opacity: 1; color: var(--olive); }
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(222, 216, 198, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--cream);
+      opacity: 0.5;
+    }
+    .footer-bottom a { color: inherit; }
+    .footer-bottom a:hover { opacity: 1; color: var(--olive); }
+
+    /* ============================================
+       SCROLL REVEAL
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s var(--ease), transform 1s var(--ease);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    }
+    .reveal-stagger.in > *:nth-child(1) { transition-delay: 0s; }
+    .reveal-stagger.in > *:nth-child(2) { transition-delay: 0.12s; }
+    .reveal-stagger.in > *:nth-child(3) { transition-delay: 0.24s; }
+    .reveal-stagger.in > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-stagger > * { opacity: 1; transform: none; transition: none; }
+      .hero-media img { animation: none; }
+    }
+
+    /* ============================================
+       MOBILE TYPOGRAPHY ADJUSTMENTS
+       Placed at end of stylesheet to win source-order precedence
+       over class-level rules. The display classes use high opsz
+       (120-144) which is tuned for very large display use. On
+       mobile where clamp() floors the font-size to ~36-48px, that
+       same opsz makes strokes too thin and letters too spread out.
+       We retune opsz to match the actual rendered sizes.
+       ============================================ */
+    @media (max-width: 880px) {
+      .display-xl {
+        font-variation-settings: "opsz" 48;
+        letter-spacing: -0.018em;
+      }
+      .display-lg {
+        font-variation-settings: "opsz" 40;
+        letter-spacing: -0.015em;
+      }
+      .display-md {
+        font-variation-settings: "opsz" 32;
+      }
+      em, i {
+        font-variation-settings: "opsz" 48;
+      }
+      .manifesto-quote {
+        font-variation-settings: "opsz" 32;
+      }
+      .lead {
+        font-variation-settings: "opsz" 18;
+      }
+      .artisan-text h2 em,
+      .form-intro h2 em,
+      .contact-info h2 em,
+      .hero-content h1 em {
+        font-variation-settings: "opsz" 48;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAV
+       ============================================ -->
+  <header class="nav" id="nav">
+    <a href="#" class="nav-brand" aria-label="Atelier BUHO, retour à l'accueil">
+      <img src="images/logos/buho-logo-nav.png" alt="Atelier BUHO" />
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#engagements">Nos engagements</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#histoire">Notre histoire</a></li>
+        <li><a href="#atelier">L'atelier</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
+  </header>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="top">
+    <div class="hero-media">
+      <img src="images/optimized/leopard-chair-detail.jpg"
+           alt="Détail d'un fauteuil ancien restauré avec un tissu brocard motif léopard à l'Atelier BUHO" />
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow">Tapissier décorateur · 75011 Paris</p>
+      <h1 class="display-xl">L'art de la<br/>tapisserie, <em>transmis<br/>et réinventé.</em></h1>
+      <p class="lead">Atelier parisien dédié à la réfection traditionnelle de sièges, à la création sur mesure, et à l'habillage textile de vos intérieurs. Pour particuliers comme pour professionnels.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">
+          Prendre rendez-vous
+          <span class="arrow">→</span>
+        </a>
+        <a href="#prestations" class="btn btn-ghost">Découvrir le savoir-faire</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================================
+       MANIFESTO
+       ============================================ -->
+  <section class="manifesto" id="engagements">
+    <div class="container">
+      <div class="manifesto-grid">
+        <div class="reveal">
+          <p class="manifesto-quote">L'excellence est au cœur de chaque <em>réalisation</em>.</p>
+        </div>
+        <div class="manifesto-text reveal">
+          <p class="eyebrow">Nos engagements</p>
+          <p>Chaque pièce qui passe entre nos mains raconte une histoire. Notre rôle est de la prolonger, parfois de l'écrire à nouveau, avec une attention scrupuleuse au détail, au choix des matières, à la justesse du geste.</p>
+          <p>Diplômée du CFA d'ameublement <em>La Bonne Graine</em> et formée auprès de maîtres tapissiers, nous mettons cette expertise artisanale au service de votre projet. Du devis à la livraison, l'accompagnement est personnalisé, attentif à vos besoins comme à vos aspirations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SAVOIR-FAIRE
+       ============================================ -->
+  <section class="savoir-faire" id="prestations">
+    <div class="container">
+      <div class="section-header">
+        <div class="reveal">
+          <p class="eyebrow" style="color: var(--sage-deep);">Nos prestations</p>
+          <h2 class="display-lg" style="margin-top: 1.5rem;">Trois savoir-faire, <em>une exigence</em>.</h2>
+        </div>
+        <p class="reveal">De la restauration d'un siège Louis XV à la création d'une banquette contemporaine, en passant par la confection de rideaux sur mesure pour un appartement haussmannien, chaque projet est traité avec le même niveau d'attention.</p>
+      </div>
+
+      <div class="prestations reveal-stagger">
+
+        <article class="prestation">
+          <div class="prestation-img">
+            <span class="prestation-number">01</span>
+            <img src="images/optimized/leopard-chaise.jpg"
+                 alt="Chaise longue contemporaine retapissée d'un tissu motif léopard, Atelier BUHO" />
+          </div>
+          <h3>Réfection traditionnelle</h3>
+          <p>Restauration de sièges anciens dans le respect des techniques d'autrefois : crin animal, sangles, ressorts, finitions à la main.</p>
+          <a href="#" class="prestation-link">En savoir plus <span>→</span></a>
+        </article>
+
+        <article class="prestation">
+          <div class="prestation-img">
+            <span class="prestation-number">02</span>
+            <img src="images/optimized/three-slipper-chairs.jpg"
+                 alt="Trois chauffeuses contemporaines retapissées dans des tons verts et bleus" />
+          </div>
+          <h3>Création sur mesure</h3>
+          <p>Pièces uniques pensées pour vos espaces. Sélection des matériaux, des textures et des coloris en dialogue avec votre univers.</p>
+          <a href="#" class="prestation-link">En savoir plus <span>→</span></a>
+        </article>
+
+        <article class="prestation">
+          <div class="prestation-img">
+            <span class="prestation-number">03</span>
+            <img src="images/optimized/haussmann-curtains-room.jpg"
+                 alt="Rideaux sur mesure en soie dans un salon haussmannien parisien" />
+          </div>
+          <h3>Décoration et couture</h3>
+          <p>Rideaux, voilages, panneaux japonais, coussins, tentures murales. L'habillage textile complet et raffiné de vos pièces.</p>
+          <a href="#" class="prestation-link">En savoir plus <span>→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       RÉALISATIONS
+       ============================================ -->
+  <section class="realisations" id="realisations">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="eyebrow">Sélection</p>
+          <h2 class="display-lg" style="margin-top: 1.5rem;">Quelques <em>réalisations</em>.</h2>
+        </div>
+        <p style="max-width: 40ch; color: var(--cream); opacity: 0.78;">
+          Un aperçu des projets récents : restauration de pièces de famille, créations contemporaines, habillages d'intérieurs parisiens.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <a href="#" class="gal-item gal-1">
+          <img src="images/optimized/hands-trim-detail.jpg"
+               alt="Mains au travail sur un galon doré, finition à la main à l'Atelier BUHO" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Atelier · 2024</p>
+            <p class="cap-title">Le geste, la finition</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-2">
+          <img src="images/optimized/gold-curtain-ceiling.jpg"
+               alt="Détail de rideau en soie dorée dans un salon haussmannien" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Couture · 2024</p>
+            <p class="cap-title">Rideaux sur mesure · soie</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-3">
+          <img src="images/optimized/lirayen-portrait-sofa.jpg"
+               alt="Portrait de Lirayen Rojas-Diaz, fondatrice de l'Atelier BUHO" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Atelier · 2024</p>
+            <p class="cap-title">L'artisan au travail</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-4">
+          <img src="images/optimized/three-slipper-chairs.jpg"
+               alt="Trois chauffeuses contemporaines retapissées" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Création · 2024</p>
+            <p class="cap-title">Chauffeuses · tons sourds</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-5">
+          <img src="images/optimized/tan-armchairs-detail.jpg"
+               alt="Détail de tissu lin sur fauteuil contemporain" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Réfection · 2024</p>
+            <p class="cap-title">Fauteuils · lin tissé</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-6">
+          <img src="images/optimized/leopard-chair-detail.jpg"
+               alt="Tissu de soie motif léopard sur siège ancien" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Réfection · 2024</p>
+            <p class="cap-title">Siège ancien · brocart de soie</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-7">
+          <img src="images/optimized/curtains-pair.jpg"
+               alt="Voilage et rideau sur mesure dans un intérieur parisien" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Couture · 2024</p>
+            <p class="cap-title">Doubles rideaux · voilages</p>
+          </div>
+        </a>
+        <a href="#" class="gal-item gal-8">
+          <img src="images/optimized/leopard-chaise.jpg"
+               alt="Chaise longue contemporaine motif léopard" loading="lazy" />
+          <div class="gal-caption">
+            <p class="cap-eyebrow">Réfection · 2024</p>
+            <p class="cap-title">Chaise longue · velours</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="gallery-cta reveal">
+        <a href="#">Voir toutes les réalisations →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ARTISAN
+       ============================================ -->
+  <section class="artisan" id="histoire">
+    <div class="container">
+      <div class="artisan-grid">
+        <div class="artisan-img reveal">
+          <img src="images/optimized/lirayen-sewing-profile.jpg"
+               alt="Lirayen Rojas-Diaz, fondatrice de l'Atelier BUHO, à la machine à coudre" />
+        </div>
+        <div class="artisan-text reveal">
+          <p class="eyebrow" style="color: var(--sage-deep);">L'artisan</p>
+          <h2 class="display-lg">Notre <em>histoire</em>.</h2>
+          <p class="artisan-subtitle">Lirayen Rojas-Diaz, fondatrice de l'atelier.</p>
+          <p>Tout a commencé avec une passion pour la couture. Dès mon plus jeune âge, j'ai été fascinée par la création et le design textile. Après une formation initiale, j'ai approfondi mes compétences auprès de maîtres artisans et de prestigieuses maisons.</p>
+          <p class="artisan-quote">Mon oncle, mon mentor, maître tapissier, est bien plus qu'un artisan talentueux. Il est un guide précieux et un modèle d'intégrité et de passion.</p>
+          <p>Attirée par l'histoire et l'artisanat qui entourent le domaine de la tapisserie, j'ai suivi une formation spécialisée, apprenant les techniques traditionnelles ainsi que les méthodes contemporaines.</p>
+          <a href="#" class="artisan-link">Lire l'histoire complète <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VALEURS
+       ============================================ -->
+  <section class="valeurs">
+    <div class="container">
+      <div class="valeurs-grid reveal-stagger">
+        <div class="valeur">
+          <p class="valeur-num">I.</p>
+          <h3>Excellence artisanale</h3>
+          <p>Diplôme du CFA d'ameublement <em>La Bonne Graine</em> et formations auprès de maîtres artisans et prestigieuses maisons.</p>
+        </div>
+        <div class="valeur">
+          <p class="valeur-num">II.</p>
+          <h3>Tradition et modernité</h3>
+          <p>Techniques traditionnelles transmises de génération en génération, méthodes contemporaines intégrées avec sens du détail.</p>
+        </div>
+        <div class="valeur">
+          <p class="valeur-num">III.</p>
+          <h3>Approche sur mesure</h3>
+          <p>Chaque projet conçu en dialogue, attentif à vos besoins et aspirations, du choix des matériaux à la livraison.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       L'ATELIER (info + Paris map)
+       ============================================ -->
+  <section class="contact" id="atelier">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <p class="eyebrow" style="color: var(--sage-deep);">L'atelier</p>
+          <h2 class="display-lg">Venez nous <em>rencontrer</em>.</h2>
+          <p style="color: var(--sage-deep); max-width: 44ch; margin-bottom: 2.5rem;">
+            L'atelier vous accueille sur rendez-vous au cœur du 11ᵉ arrondissement. Apportez votre projet, vos pièces, vos inspirations. Nous en discutons ensemble.
+          </p>
+
+          <ul class="info-list">
+            <li class="info-item">
+              <span class="info-label">Adresse</span>
+              <span class="info-value">
+                58 rue Trousseau
+                <span class="small">75011 Paris · Métro Ledru-Rollin · Faidherbe-Chaligny</span>
+              </span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">Horaires</span>
+              <span class="info-value">
+                Du lundi au samedi
+                <span class="small">9h - 18h</span>
+              </span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">Téléphone</span>
+              <span class="info-value"><a href="tel:+33609262759">06 09 26 27 59</a></span>
+            </li>
+            <li class="info-item">
+              <span class="info-label">Email</span>
+              <span class="info-value"><a href="mailto:atelier.buho@gmail.com">atelier.buho@gmail.com</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="atelier-map reveal" role="img" aria-label="Carte de Paris indiquant la position de l'Atelier BUHO au 58 rue Trousseau dans le 11e arrondissement">
+          <svg viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <radialGradient id="mapGlow" cx="65%" cy="48%" r="50%">
+                <stop offset="0%" stop-color="#b58f60" stop-opacity="0.12" />
+                <stop offset="100%" stop-color="#b58f60" stop-opacity="0" />
+              </radialGradient>
+              <pattern id="mapDots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="0.5" fill="#bcb794" opacity="0.18" />
+              </pattern>
+            </defs>
+
+            <!-- Background -->
+            <rect width="600" height="540" fill="url(#mapDots)" />
+            <rect width="600" height="540" fill="url(#mapGlow)" />
+
+            <!-- Paris boundary (boulevard périphérique - snail silhouette) -->
+            <path d="M 260 125
+                     Q 290 115 320 110
+                     Q 360 115 390 125
+                     Q 420 138 445 158
+                     Q 460 175 470 195
+                     Q 480 210 485 230
+                     Q 490 250 490 275
+                     Q 485 300 475 320
+                     Q 462 340 445 355
+                     Q 425 372 405 385
+                     Q 380 400 355 405
+                     Q 325 412 300 410
+                     Q 272 410 245 400
+                     Q 220 395 200 385
+                     Q 180 370 160 355
+                     Q 145 335 130 315
+                     Q 118 295 110 275
+                     Q 105 253 105 230
+                     Q 108 210 115 195
+                     Q 125 178 135 165
+                     Q 152 155 170 145
+                     Q 190 138 215 135
+                     Q 235 130 260 125 Z"
+                  fill="#5f6559"
+                  fill-opacity="0.22"
+                  stroke="#bcb794"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                  opacity="0.9" />
+
+            <!-- 11e arrondissement fill (highlighted with warm tan) -->
+            <path d="M 348 222
+                     L 432 240
+                     L 428 295
+                     L 395 305
+                     L 350 285 Z"
+                  fill="#b58f60"
+                  fill-opacity="0.22"
+                  stroke="#b58f60"
+                  stroke-width="1"
+                  stroke-opacity="0.65"
+                  stroke-linejoin="round" />
+
+            <!-- Arrondissement internal boundaries (clean network forming coherent cells) -->
+            <g stroke="#bcb794" stroke-width="0.8" opacity="0.45" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <!-- North vertical: 17/18 boundary -->
+              <path d="M 285 112 L 285 165 L 290 218" />
+              <!-- North vertical: 18/19 boundary, descending to Republic -->
+              <path d="M 355 115 L 348 175 L 348 222" />
+              <!-- NE corner: 19/20 boundary -->
+              <path d="M 432 152 L 415 200 L 415 240" />
+              <!-- NW arc: 17/16/Étoile axis -->
+              <path d="M 140 175 L 175 195 L 205 215 L 230 222" />
+              <!-- Grands Boulevards (E-W arc through north center) -->
+              <path d="M 230 222 L 285 222 L 348 222" />
+              <!-- Boulevard de Sébastopol (N-S between 1/2/3 and 3/10) -->
+              <path d="M 322 222 L 322 270" />
+              <!-- Rue de Rivoli (E-W axis) -->
+              <path d="M 270 270 L 350 285" />
+              <!-- Rue Royale (1/8 separator, Concorde to Madeleine) -->
+              <path d="M 270 270 L 230 222" />
+              <!-- 11e boundary continuation: Boulevard de Belleville (Republic to Père-Lachaise) -->
+              <path d="M 348 222 L 432 240" />
+              <!-- 11e east edge: Boulevard de Charonne -->
+              <path d="M 432 240 L 428 295" />
+              <!-- 11e south edge: rue du Faubourg Saint-Antoine -->
+              <path d="M 428 295 L 395 305 L 350 285" />
+              <!-- East extension: 20e/12e (Avenue de Vincennes) -->
+              <path d="M 432 270 L 475 300" />
+              <!-- Avenue Daumesnil (12e diagonal) -->
+              <path d="M 350 285 L 425 325 L 460 350" />
+              <!-- Boulevard Saint-Germain (rive gauche horizontal) -->
+              <path d="M 195 312 L 270 305 L 310 298" />
+              <!-- Boulevard Saint-Michel (5/6 vertical) -->
+              <path d="M 310 302 L 315 360" />
+              <!-- 5/13 boundary -->
+              <path d="M 315 360 L 345 400" />
+              <!-- 13/14 boundary -->
+              <path d="M 290 360 L 292 405" />
+              <!-- Avenue du Maine (14e) -->
+              <path d="M 252 340 L 278 395" />
+              <!-- Boulevard du Montparnasse -->
+              <path d="M 218 335 L 305 322" />
+              <!-- 15/16 separator (south-west) -->
+              <path d="M 130 285 L 175 282 L 205 295" />
+              <!-- 16e north (Trocadéro/Passy) -->
+              <path d="M 135 230 L 180 222" />
+            </g>
+
+            <!-- Seine - characteristic backwards-S curve (prominent, the iconic feature) -->
+            <path d="M 488 358
+                     C 458 340 425 320 395 305
+                     C 370 295 350 290 332 290
+                     C 318 290 304 292 290 295
+                     C 268 302 240 312 215 318
+                     C 185 322 152 318 130 308
+                     C 115 300 100 290 92 278"
+                  fill="none"
+                  stroke="#ded8c6"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                  opacity="0.72" />
+
+            <!-- Île de la Cité -->
+            <ellipse cx="320" cy="291" rx="15" ry="4.5" fill="#ded8c6" opacity="0.55" />
+            <!-- Île Saint-Louis -->
+            <ellipse cx="342" cy="290" rx="7" ry="3" fill="#ded8c6" opacity="0.45" />
+
+            <!-- 11e label (italic, inside the highlighted area) -->
+            <text x="390" y="248" fill="#b58f60" font-family="Fraunces, serif" font-size="17" text-anchor="middle" font-style="italic" opacity="1">11ᵉ</text>
+
+            <!-- Atelier marker (focal point inside the 11e) -->
+            <g transform="translate(388, 268)">
+              <circle r="8" fill="#b58f60" opacity="0">
+                <animate attributeName="r" values="7;32;32" dur="2.8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0" dur="2.8s" repeatCount="indefinite" />
+              </circle>
+              <circle r="8" fill="#b58f60" opacity="0">
+                <animate attributeName="r" values="7;32;32" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.55;0;0" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+              </circle>
+              <circle r="13" fill="#b58f60" opacity="0.28" />
+              <circle r="6.5" fill="#b58f60" stroke="#ded8c6" stroke-width="1.6" />
+              <circle r="2.4" fill="#ded8c6" opacity="0.9" />
+            </g>
+
+            <!-- Atelier label with dashed connecting line -->
+            <g>
+              <line x1="388" y1="285" x2="388" y2="450" stroke="#ded8c6" stroke-width="0.6" opacity="0.45" stroke-dasharray="2 3" />
+              <text x="388" y="470" fill="#ded8c6" font-family="Fraunces, serif" font-size="17" text-anchor="middle" font-style="italic">Atelier BUHO</text>
+              <text x="388" y="488" fill="#bcb794" font-family="Manrope, sans-serif" font-size="9.5" text-anchor="middle" letter-spacing="2.5" opacity="0.9">58 RUE TROUSSEAU</text>
+            </g>
+
+            <!-- Compass rose -->
+            <g transform="translate(540, 75)" opacity="0.55">
+              <circle r="16" fill="none" stroke="#bcb794" stroke-width="0.6" />
+              <circle r="1.5" fill="#bcb794" />
+              <line x1="0" y1="-13" x2="0" y2="13" stroke="#ded8c6" stroke-width="0.5" opacity="0.7" />
+              <line x1="-13" y1="0" x2="13" y2="0" stroke="#ded8c6" stroke-width="0.5" opacity="0.4" />
+              <polygon points="0,-13 -3,-4 0,-7 3,-4" fill="#ded8c6" opacity="0.85" />
+              <text x="0" y="-22" fill="#bcb794" font-family="Manrope, sans-serif" font-size="8" text-anchor="middle" letter-spacing="2">N</text>
+            </g>
+
+            <!-- Footer labels -->
+            <text x="40" y="518" fill="#bcb794" font-family="Manrope, sans-serif" font-size="8.5" letter-spacing="3.5" opacity="0.55">PARIS · 11ᵉ ARRONDISSEMENT</text>
+            <text x="560" y="518" fill="#bcb794" font-family="Manrope, sans-serif" font-size="8.5" letter-spacing="3.5" opacity="0.55" text-anchor="end">48°51′13″N · 2°22′46″E</text>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT FORM
+       ============================================ -->
+  <section class="form-section" id="contact">
+    <div class="container">
+      <div class="form-section-grid">
+
+        <div class="form-intro reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="display-lg">Parlez-nous de votre <em>projet</em>.</h2>
+          <p>Décrivez votre projet en quelques lignes. Nous reviendrons vers vous sous 48h ouvrées pour échanger sur vos besoins, le calendrier et un éventuel rendez-vous à l'atelier.</p>
+        </div>
+
+        <div class="form-wrap reveal">
+          <form action="mailto:atelier.buho@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-row-double">
+              <div class="form-row">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="nom" placeholder="Votre nom" required />
+              </div>
+              <div class="form-row">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="telephone" placeholder="06 ..." />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.fr" required />
+            </div>
+
+            <div class="form-row">
+              <label for="projet">Type de projet</label>
+              <select id="projet" name="projet" required>
+                <option value="">Sélectionner...</option>
+                <option>Réfection d'un siège ancien</option>
+                <option>Création sur mesure</option>
+                <option>Rideaux et décoration couture</option>
+                <option>Projet professionnel</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" placeholder="Décrivez votre projet, vos contraintes, votre calendrier..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Envoyer le message →</button>
+            <p class="form-note">Réponse sous 48h ouvrées. Vos informations restent strictement confidentielles.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logos/buho-logo-full.png" alt="Atelier BUHO, Tapissier décorateur" class="footer-logo" />
+          <p>Atelier de tapisserie décorateur à Paris 11ᵉ. Réfection traditionnelle, création sur mesure, rideaux et couture.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="#engagements">Nos engagements</a></li>
+            <li><a href="#prestations">Prestations</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#histoire">Notre histoire</a></li>
+            <li><a href="#atelier">L'atelier</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>58 rue Trousseau<br/>75011 Paris</li>
+            <li><a href="tel:+33609262759">06 09 26 27 59</a></li>
+            <li><a href="mailto:atelier.buho@gmail.com">atelier.buho@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suivre</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Atelier BUHO · SIREN 937 684 736</span>
+        <span>
+          <a href="#">Mentions légales</a> ·
+          <a href="#">Politique de confidentialité</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav background on scroll
+    const nav = document.getElementById('nav');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+      lastScroll = y;
+    }, { passive: true });
+
+    // Intersection observer for scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+    // Smooth anchor scroll respecting reduced motion
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        if (href.length > 1) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // Form fake handler (until backend wired)
+    document.querySelector('form').addEventListener('submit', (e) => {
+      // Real handler will be wired in production (Formspree, Web3Forms, or own backend).
+      // For prototype, mailto fallback works on submit naturally.
+    });
+  </script>
+
+</body>
+</html>
