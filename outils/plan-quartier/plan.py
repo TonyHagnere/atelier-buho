@@ -92,7 +92,7 @@ def inside(c, m=25):
     return keep
 LABELS = [('Rue du Faubourg Saint-Antoine', 'Rue du Faubourg St-Antoine', (625, 590), 13), ('Avenue Ledru-Rollin', 'Avenue Ledru-Rollin', (545, 215), 13),
           ('Rue de Charonne', 'Rue de Charonne', (735, 330), 10), ('Rue de la Roquette', 'Rue de la Roquette', (330, 215), 10), ('Boulevard Voltaire', 'Boulevard Voltaire', (745, 160), 13)]
-o.append(f'<g font-family="\'Sackers Gothic\', Bilo, Manrope, sans-serif" font-weight="300" font-size="16" letter-spacing="1.7" fill="{P["label"]}" stroke="{P["ground"]}" stroke-width="5" stroke-linejoin="round" paint-order="stroke" style="text-transform:uppercase">')
+o.append(f'<g font-family="Manrope, sans-serif" font-weight="500" font-size="13.5" letter-spacing="2.4" fill="{P["label"]}" stroke="{P["ground"]}" stroke-width="5" stroke-linejoin="round" paint-order="stroke" style="text-transform:uppercase">')
 for i, (name, text, pos, w) in enumerate(LABELS):
     if name not in named: continue
     c = inside(chain(named[name]))
@@ -100,7 +100,7 @@ for i, (name, text, pos, w) in enumerate(LABELS):
     dx, dy = c[-1][0] - c[0][0], c[-1][1] - c[0][1]
     if (abs(dx) >= abs(dy) and dx < 0) or (abs(dx) < abs(dy) and dy > 0): c = c[::-1]
     length = sum(math.dist(a, b) for a, b in zip(c, c[1:]))
-    need = len(text) * 16 * 0.78
+    need = len(text) * 13.5 * 0.92
     if length < need * 1.05: continue
     o.append(f'<path id="n-{i}" d="{d_of(c)}" fill="none" stroke="none"/>')
     acc, best, off = 0.0, 1e9, 0.0
@@ -116,24 +116,26 @@ for i, (name, text, pos, w) in enumerate(LABELS):
 o.append('</g>')
 
 # --- Stations de métro
-o.append(f'<g font-family="Bilo, Manrope, sans-serif" font-size="19" fill="{P["ink"]}" stroke="{P["ground"]}" stroke-width="5" stroke-linejoin="round" paint-order="stroke">')
+o.append(f'<g font-family="Manrope, sans-serif" font-size="17" fill="{P["ink"]}" stroke="{P["ground"]}" stroke-width="5" stroke-linejoin="round" paint-order="stroke">')
 for name, label, side in [('Ledru-Rollin', 'Ledru-Rollin', 'bl'), ('Faidherbe — Chaligny', 'Faidherbe-Chaligny', 'bl'), ('Bastille', 'Bastille', 'r'), ('Charonne', 'Charonne', 'r')]:
     if name not in stations: continue
     x, y = stations[name]
+    o.append('<g class="d-only">' if name in ('Charonne', 'Bastille') else '<g>')
     o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11.5" fill="{P["metro_fill"]}" stroke="{P["ink"]}" stroke-width="1.5" paint-order="normal"/>')
-    o.append(f'<text x="{x:.1f}" y="{y + 5.2:.1f}" text-anchor="middle" font-weight="500" font-size="14.5" stroke="none">M</text>')
+    o.append(f'<text x="{x:.1f}" y="{y + 5.2:.1f}" text-anchor="middle" font-weight="600" font-size="13.5" stroke="none">M</text>')
     if side == 'r': o.append(f'<text x="{x + 19:.1f}" y="{y + 6.5:.1f}">{label}</text>')
     elif side == 'l': o.append(f'<text x="{x - 19:.1f}" y="{y + 6.5:.1f}" text-anchor="end">{label}</text>')
     else: o.append(f'<text x="{x + 12:.1f}" y="{y + 34:.1f}" text-anchor="end">{label}</text>')
+    o.append('</g>')
 o.append('</g>')
 
 # --- L'atelier
 ax, ay = xy(*ATELIER)
-bx, by, bw, bh = ax + 30, ay + 26, 262, 78
+bx, by, bw, bh = ax + 30, ay + 26, 276, 78
 o.append(f'<path d="M{ax:.1f} {ay:.1f}L{bx:.1f} {by:.1f}" stroke="{P["dot"]}" stroke-width="1.4" fill="none"/>')
 o.append(f'<rect x="{bx:.1f}" y="{by:.1f}" width="{bw}" height="{bh}" fill="{P["box"]}" stroke="{P["box_stroke"]}" stroke-width="1.1"/>')
-o.append(f'<text x="{bx + 18:.1f}" y="{by + 36:.1f}" font-family="Nave, Fraunces, Georgia, serif" font-weight="500" font-size="29" fill="#333322">Atelier BUHO</text>')
-o.append(f'<text x="{bx + 18:.1f}" y="{by + 61:.1f}" font-family="Bilo, Manrope, sans-serif" font-size="18.5" fill="#4a4f44">58 rue Trousseau, Paris 11e</text>')
+o.append(f'<text x="{bx + 18:.1f}" y="{by + 36:.1f}" font-family="Fraunces, Georgia, serif" font-weight="500" font-size="28" fill="#333322">Atelier BUHO</text>')
+o.append(f'<text x="{bx + 18:.1f}" y="{by + 61:.1f}" font-family="Manrope, sans-serif" font-size="16" fill="#4a4f44">58 rue Trousseau, Paris 11e</text>')
 o.append(f'<circle cx="{ax:.1f}" cy="{ay:.1f}" r="10.5" fill="{P["dot"]}" stroke="{P["ring"]}" stroke-width="3"/>')
 
 # --- Échelle (200 m)
@@ -141,7 +143,7 @@ m200 = 200 / (((E - W) * math.cos(math.radians((N + S) / 2)) * 111320) / VW)
 sx, sy = 34, VH - 34
 o.append('<g class="d-only">')
 o.append(f'<path d="M{sx} {sy - 6}V{sy}H{sx + m200:.1f}V{sy - 6}" fill="none" stroke="{P["ink"]}" stroke-width="1.4"/>')
-o.append(f'<text x="{sx + m200 + 10:.1f}" y="{sy + 1}" font-family="Bilo, Manrope, sans-serif" font-size="17" fill="{P["ink"]}" stroke="{P["ground"]}" stroke-width="5" stroke-linejoin="round" paint-order="stroke">200 m</text>')
+o.append(f'<text x="{sx + m200 + 10:.1f}" y="{sy + 1}" font-family="Manrope, sans-serif" font-size="15.5" fill="{P["ink"]}" stroke="{P["ground"]}" stroke-width="5" stroke-linejoin="round" paint-order="stroke">200 m</text>')
 o.append('</g>')
 o.append('</svg>')
 svg = '\n'.join(o)
