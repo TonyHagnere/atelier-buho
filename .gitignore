@@ -1,3 +1,9 @@
 .DS_Store
 .claude/
 *.log
+
+# Polices sous licence : ne pas publier (repo public)
+fonts/
+
+# Photos sources en haute résolution : seules les versions optimisées sont publiées
+images/originaux/

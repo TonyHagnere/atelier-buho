@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demander un devis · Atelier BUHO, tapissier décorateur à Paris 11ᵉ</title>
+  <meta name="description" content="Devis gratuit pour la réfection d'un siège, une création sur mesure, des rideaux ou des stores. Atelier BUHO, 58 rue Trousseau, Paris 11ᵉ. Réponse sous 48 h ouvrées." />
+  <meta name="author" content="Atelier BUHO" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Atelier BUHO" />
+  <meta property="og:title" content="Demander un devis · Atelier BUHO, tapissier décorateur à Paris 11ᵉ" />
+  <meta property="og:description" content="Devis gratuit pour la réfection d'un siège, une création sur mesure, des rideaux ou des stores. Atelier BUHO, 58 rue Trousseau, Paris 11ᵉ. Réponse sous 48 h ouvrées." />
+  <meta property="og:image" content="../images/photos/atelier-couverture-fauteuil-1280.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Substituts web (utilisés seulement si les polices de la charte ne sont pas disponibles) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap">
+      <a href="index.html" class="brand"><img src="../images/logos/buho-logo-nav-sombre.png" width="600" height="227" alt="Atelier BUHO, retour à l'accueil" /></a>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="engagements.html">Nos engagements</a></li>
+          <li><a href="prestations.html">Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="histoire.html">Notre histoire</a></li>
+          <li><a href="index.html#atelier">L'atelier</a></li>
+          <li class="nav-rdv"><a href="contact.html" aria-current="page">Demander un devis</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+33609262759" class="header-tel">06 09 26 27 59</a>
+      <a href="contact.html" class="btn header-cta">Demander un devis</a>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="wrap cols">
+        <h1 class="display">Demander un devis</h1>
+        <p class="lead">Le devis est gratuit. Décrivez votre projet en quelques lignes, joignez des photos si vous en avez : nous revenons vers vous sous 48 h ouvrées.</p>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="wrap cols">
+        <div class="quote-direct">
+          <p class="big">
+            <a href="tel:+33609262759" class="nowrap">06 09 26 27 59</a>
+            <a href="mailto:atelier.buho@gmail.com">atelier.buho@gmail.com</a>
+          </p>
+          <dl class="info">
+            <div>
+              <dt>Horaires</dt>
+              <dd>Du lundi au samedi, 9h à 18h</dd>
+            </div>
+            <div>
+              <dt>Adresse</dt>
+              <dd>58 rue Trousseau, 75011 Paris</dd>
+            </div>
+            <div>
+              <dt>Métro</dt>
+              <dd>Ledru-Rollin, Faidherbe-Chaligny</dd>
+            </div>
+          </dl>
+          <p class="note">L'atelier reçoit sur rendez-vous. Un appel ou un message suffit pour en convenir.</p>
+        </div>
+        <form class="quote-form" id="quote-form" action="mailto:atelier.buho@gmail.com" method="post" enctype="multipart/form-data" data-endpoint="">
+          <div class="fields-2">
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="telephone">Téléphone <span>(facultatif)</span></label>
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="projet">Type de projet</label>
+            <select id="projet" name="projet" required>
+              <option value="">Choisir</option>
+              <option>Réfection d'un siège ancien</option>
+              <option>Création sur mesure</option>
+              <option>Rideaux, voilages, stores</option>
+              <option>Projet professionnel</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Votre projet</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="field">
+            <label for="photos">Photos <span>(facultatif)</span></label>
+            <input type="file" id="photos" name="photos" accept="image/*" multiple aria-describedby="photos-aide" />
+            <p class="hint" id="photos-aide">Une vue de face, une de côté, un détail du tissu : cela aide à chiffrer.</p>
+          </div>
+          <button type="submit" class="btn">Envoyer ma demande</button>
+          <p class="form-note">Vos informations ne servent qu'à répondre à votre demande.</p>
+          <p class="form-status" id="form-status" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div class="footer-brand">
+          <img src="../images/logos/buho-logo-full.png" width="1501" height="838" alt="Atelier BUHO, tapissier décorateur" />
+          <p>Atelier de tapisserie à Paris 11<sup>e</sup>. Réfection traditionnelle, création sur mesure, rideaux et couture.</p>
+        </div>
+        <div class="footer-col">
+          <p class="label">Atelier</p>
+          <ul>
+            <li>58 rue Trousseau, 75011 Paris</li>
+            <li>Du lundi au samedi, 9h à 18h</li>
+            <li><a href="tel:+33609262759" class="nowrap">06 09 26 27 59</a></li>
+            <li><a href="mailto:atelier.buho@gmail.com">atelier.buho@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="label">Plan du site</p>
+          <ul>
+            <li><a href="engagements.html">Nos engagements</a></li>
+            <li><a href="prestations.html">Prestations</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="histoire.html">Notre histoire</a></li>
+            <li><a href="index.html#atelier">L'atelier</a></li>
+            <li><a href="contact.html">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">© 2026 Atelier BUHO. SIREN 937 684 736.</p>
+    </div>
+  </footer>
+
+
+
+  <script src="site.js"></script>
+
+</body>
+</html>
