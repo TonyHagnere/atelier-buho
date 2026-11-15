@@ -3,32 +3,9 @@
    Feuille de style commune à toutes les pages du dossier v4/.
    ============================================ */
 
-/* Polices de la charte : fichiers locaux dans fonts/ (non publiés : licence).
-   Sans eux, les pages retombent sur Fraunces et Manrope. */
-@font-face {
-  font-family: "Nave";
-  src: url("../fonts/Nave-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Bilo";
-  src: url("../fonts/Bilo-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Bilo";
-  src: url("../fonts/Bilo-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Sackers Gothic";
-  src: url("../fonts/SackersGothicStd-Light.otf") format("opentype");
-  font-weight: 300;
-  font-display: swap;
-}
+/* Polices : Fraunces (titres) et Manrope (texte), chargées depuis Google Fonts.
+   Ce sont les substituts web des polices de la charte (Nave, Bilo, Sackers Gothic),
+   dont les licences web n'ont pas été acquises. Le site est réglé pour ces deux polices. */
 
 :root {
   /* Palette de la charte */
@@ -45,9 +22,8 @@
   --muted: var(--sage);
   --rule: rgba(51, 51, 34, 0.2);
 
-  --serif: "Nave", "Fraunces", Georgia, serif;
-  --sans: "Bilo", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --caps: "Sackers Gothic", "Bilo", "Manrope", system-ui, sans-serif;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
   --gap: clamp(1rem, 2vw, 1.75rem);
@@ -98,14 +74,12 @@ h2 {
   letter-spacing: -0.008em;
 }
 
-/* Petites capitales de la charte : réservées aux libellés */
+/* Libellés en petites capitales espacées */
 .label {
-  font: 300 0.78rem/1.4 var(--caps);
-  letter-spacing: 0.14em;
+  font: 500 0.74rem/1.4 var(--sans);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-/* Les chiffres de Sackers Gothic se lisent mal (le 1 ressemble à un I) */
-.label .num { font-family: var(--sans); font-weight: 400; letter-spacing: 0.06em; }
 
 .btn {
   display: inline-block;
@@ -239,7 +213,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .teaser-text p { max-width: 34ch; }
 .teaser-text .byline { margin-top: 0.5rem; color: var(--muted); font-size: 0.97rem; }
 .teaser-list a {
-  font: 500 clamp(1.2rem, 1.7vw, 1.45rem)/1.4 var(--serif);
+  font: 400 clamp(1.2rem, 1.7vw, 1.45rem)/1.4 var(--serif);
   text-decoration: none;
 }
 .teaser-list a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
@@ -266,7 +240,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .coords .big a {
   display: block;
   width: fit-content;
-  font: 500 clamp(1.3rem, 2vw, 1.7rem)/1.35 var(--serif);
+  font: 400 clamp(1.3rem, 2vw, 1.7rem)/1.35 var(--serif);
   text-decoration: none;
 }
 .coords .big a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
@@ -334,13 +308,13 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .page-head { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(2.75rem, 6vw, 4.75rem); }
 /* Hauteur réservée pour le chapeau le plus long : le titre tombe ainsi au même endroit
    sur toutes les pages, quel que soit le nombre de lignes du chapeau. */
-.page-head { --lead-size: clamp(1.15rem, 1.65vw, 1.45rem); --lead-lines: 4; }
-.page-head > .cols { align-items: end; min-height: calc(var(--lead-size) * 1.38 * var(--lead-lines) + 0.45rem); }
+.page-head { --lead-size: clamp(1.1rem, 1.5vw, 1.3rem); --lead-lines: 4; }
+.page-head > .cols { align-items: end; min-height: calc(var(--lead-size) * 1.42 * var(--lead-lines) + 0.45rem); }
 .page-head h1 { grid-column: 1 / span 7; }
 .page-head .lead {
   grid-column: 8 / -1;
   padding-bottom: 0.45rem;
-  font: 500 var(--lead-size)/1.38 var(--serif);
+  font: 400 var(--lead-size)/1.42 var(--serif);
 }
 
 /* Engagements : un visuel et un texte par engagement, en alternance */
@@ -355,7 +329,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 /* Prestations : les photos, puis un texte court */
 .service { padding-bottom: var(--space); scroll-margin-top: 6.5rem; }
 /* Le titre et le texte suivent les photos, sur les mêmes colonnes que l'en-tête de page */
-.service-head { align-items: start; margin-top: clamp(1.75rem, 3.5vw, 2.5rem); }
+.service-head { align-items: start; margin-top: clamp(2.5rem, 5vw, 3.75rem); }
 .service-head h2 { grid-column: 1 / span 7; }
 .service-body { grid-column: 8 / -1; padding-top: 0.35rem; }
 .service-body p { max-width: 50ch; }
@@ -387,7 +361,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   align-items: center;
   gap: 1.5rem 3rem;
 }
-.closing-title { font: 500 clamp(1.5rem, 2.6vw, 2.2rem)/1.15 var(--serif); }
+.closing-title { font: 400 clamp(1.5rem, 2.6vw, 2.2rem)/1.15 var(--serif); }
 .closing-sub { margin-top: 0.5rem; color: var(--cream); }
 .closing .btn { background: var(--cream-light); color: var(--olive-black); }
 .closing .btn:hover { background: var(--olive); }
@@ -421,13 +395,11 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 }
 
 /* ---------- Écrans intermédiaires : l'en-tête se resserre ---------- */
-@media (max-width: 1439px) {
-  .page-head { --lead-lines: 5; }
-}
 @media (max-width: 1180px) {
   .header-tel { display: none; }
+  .page-head { --lead-lines: 5; }
 }
-@media (max-width: 1020px) {
+@media (max-width: 960px) {
   .page-head { --lead-lines: 6; }
 }
 @media (max-width: 1080px) {
@@ -531,7 +503,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   .fields-2 { display: block; }
   /* Sur petit écran, le plan se resserre autour de l'atelier pour rester lisible */
   .place-map .plan { aspect-ratio: 1 / 1; }
-  .place-map svg { width: 170%; max-width: none; margin-left: calc(50% - 170% * 0.572); margin-top: calc(50% - 170% * 0.38); }
+  .place-map svg { width: 170%; max-width: none; margin-left: calc(50% - 170% * 0.585); margin-top: calc(50% - 170% * 0.38); }
   .place-map .d-only { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .call-bar, .call-bar.is-visible { transition: none; } }
