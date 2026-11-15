@@ -160,7 +160,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   text-decoration-thickness: 1px;
   text-underline-offset: 0.45em;
 }
-.nav .nav-rdv { display: none; }
+.nav .nav-rdv, .nav .nav-tel { display: none; }
 .header-tel { font-weight: 500; text-decoration: none; white-space: nowrap; }
 .header-tel:hover { text-decoration: underline; text-decoration-thickness: 1px; }
 .menu-toggle {
@@ -415,28 +415,44 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   .brand img { width: 4.5rem; }
   .header-cta { display: none; }
   .menu-toggle { display: block; }
+  /* Menu ouvert : un panneau crème qui couvre tout l'écran, pour ne plus le confondre
+     avec la page restée dessous. */
   .nav {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    height: calc(100vh - 4rem);
+    height: calc(100dvh - 4rem);
     margin: 0;
-    background: var(--cream-light);
-    border-bottom: 1px solid var(--ink);
+    padding: 1.5rem 0 2rem;
+    overflow-y: auto;
+    background: var(--cream);
   }
+  .site-header.open { background: var(--cream); border-bottom-color: transparent; }
   .site-header.open .nav { display: block; }
+  html.menu-open { overflow: hidden; }
   .nav ul { display: block; }
   .nav a {
     display: block;
-    padding: 0.95rem var(--gutter);
-    border-top: 1px solid var(--rule);
-    font-size: 1.1rem;
+    padding: 0.65rem var(--gutter);
+    font: 400 1.8rem/1.2 var(--serif);
   }
-  .nav a:hover, .nav a[aria-current="page"] { text-decoration: none; }
-  .nav a[aria-current="page"] { font-weight: 500; }
-  .nav .nav-rdv { display: block; }
-  .nav .nav-rdv a { font-weight: 500; }
+  .nav a:hover { text-decoration: none; }
+  .nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.3em; }
+  .nav .nav-rdv, .nav .nav-tel { display: block; }
+  .nav .nav-rdv { margin: 1.75rem var(--gutter) 0; }
+  .nav .nav-rdv a {
+    display: inline-block;
+    padding: 0.85rem 1.35rem;
+    background: var(--olive-black);
+    color: var(--cream-light);
+    font: 500 1rem/1.2 var(--sans);
+    border-radius: 2px;
+    text-decoration: none;
+  }
+  .nav .nav-tel a { margin-top: 0.4rem; font: 500 1.05rem/1.2 var(--sans); }
   .place-section, .service, .group { scroll-margin-top: 4.5rem; }
 
   .cols { display: block; }
