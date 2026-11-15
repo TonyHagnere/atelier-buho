@@ -49,16 +49,16 @@
     <section class="page-head">
       <div class="wrap cols">
         <h1 class="display">Réalisations</h1>
-        <div class="lead plain">
-          <p>Une sélection de projets récents : sièges anciens, pièces de designers, rideaux et stores pour des intérieurs parisiens.</p>
-          <p class="page-nav"><a href="#sieges">Sièges</a> <a href="#rideaux">Rideaux et stores</a></p>
-        </div>
+        <p class="lead">Une sélection de projets récents : sièges anciens, pièces de designers, rideaux et stores pour des intérieurs parisiens.</p>
       </div>
     </section>
 
     <section class="group" id="sieges">
       <div class="wrap">
-        <h2>Sièges</h2>
+        <div class="group-head">
+          <h2>Sièges</h2>
+          <a class="more" href="#rideaux">Voir les rideaux et stores</a>
+        </div>
         <div class="row">
           <figure style="--ar: 0.750">
             <img src="../images/photos/bergeres-sue-et-mare-700.jpg" srcset="../images/photos/bergeres-sue-et-mare-700.jpg 700w, ../images/photos/bergeres-sue-et-mare-1400.jpg 1400w" sizes="(max-width: 640px) 92vw, (min-width: 1440px) 440px, 31vw" width="1400" height="1867" loading="lazy" decoding="async" alt="Paire de bergères Art déco en bois verni, recouvertes d'un velours sombre à grands motifs clairs" />
@@ -197,7 +197,7 @@
       </div>
     </section>
 
-    <section class="closing">
+    <section class="closing" data-cta-zone>
       <div class="wrap">
         <div>
           <p class="closing-title">Un siège à refaire, des rideaux à créer ?</p>
@@ -244,8 +244,8 @@
     </div>
   </footer>
 
-  <div class="call-bar">
-    <a href="tel:+33609262759" class="btn btn-line">Appeler</a>
+  <div class="call-bar" id="call-bar">
+    <a href="tel:+33609262759" class="tel nowrap">06 09 26 27 59</a>
     <a href="contact.html" class="btn">Demander un devis</a>
   </div>
 
