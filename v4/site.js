@@ -1,19 +1,19 @@
 // Atelier BUHO · V4 · script commun à toutes les pages
 
-// Menu mobile
+// Menu mobile : un panneau plein écran, la page ne défile plus dessous tant qu'il est ouvert
 const header = document.getElementById('site-header');
 const toggle = document.getElementById('menu-toggle');
-function closeMenu() {
-  header.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.textContent = 'Menu';
-}
-toggle.addEventListener('click', () => {
-  const open = header.classList.toggle('open');
+function setMenu(open) {
+  header.classList.toggle('open', open);
+  document.documentElement.classList.toggle('menu-open', open);
   toggle.setAttribute('aria-expanded', String(open));
   toggle.textContent = open ? 'Fermer' : 'Menu';
-});
-document.querySelectorAll('#nav a').forEach(link => link.addEventListener('click', closeMenu));
+}
+toggle.addEventListener('click', () => setMenu(!header.classList.contains('open')));
+document.querySelectorAll('#nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+// Si la fenêtre repasse en grand format, le menu mobile se referme
+window.matchMedia('(min-width: 901px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
 
 // Barre fixe sur mobile (numéro et bouton de devis)
 // Elle ne s'affiche que si aucune zone de la page ne propose déjà le bouton et le numéro :
