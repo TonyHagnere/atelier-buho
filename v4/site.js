@@ -15,6 +15,21 @@ toggle.addEventListener('click', () => {
 });
 document.querySelectorAll('#nav a').forEach(link => link.addEventListener('click', closeMenu));
 
+// Barre fixe sur mobile (numéro et bouton de devis)
+// Elle ne s'affiche que si aucune zone de la page ne propose déjà le bouton et le numéro :
+// l'ouverture de l'accueil en haut, le bandeau sombre en bas de chaque page.
+const callBar = document.getElementById('call-bar');
+if (callBar && 'IntersectionObserver' in window) {
+  const zones = document.querySelectorAll('[data-cta-zone]');
+  const onScreen = new Set();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.isIntersecting ? onScreen.add(entry.target) : onScreen.delete(entry.target));
+    callBar.classList.toggle('is-visible', onScreen.size === 0);
+  }, { rootMargin: '-64px 0px -64px 0px' });
+  zones.forEach(zone => observer.observe(zone));
+  if (!zones.length) callBar.classList.add('is-visible');
+}
+
 // Formulaire de devis (contact.html)
 // Deux modes, selon l'attribut data-endpoint du formulaire :
 //   - vide (aujourd'hui) : on prépare un email dans la messagerie du visiteur.

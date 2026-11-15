@@ -213,7 +213,6 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .hero .display span { display: block; }
 .hero-aside p { max-width: 34ch; }
 .hero-aside .actions { margin-top: 1.6rem; }
-.hero-aside .reassure { margin-top: 0.9rem; font-size: 0.92rem; color: var(--muted); }
 
 /* ---------- Accueil : rubriques (un visuel, quelques mots, un lien) ----------
    Chaque rubrique est un bloc fermé : la photo et un panneau crème accolé,
@@ -244,7 +243,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   text-decoration: none;
 }
 .teaser-list a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
-.teaser-head {
+.teaser-head, .group-head {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -252,7 +251,7 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   gap: 0.75rem 2rem;
   margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
-.teaser-head .more { margin-top: 0; }
+.teaser-head .more, .group-head .more { margin-top: 0; }
 
 /* ---------- Accueil : l'atelier ---------- */
 .place-section { padding-bottom: var(--space); scroll-margin-top: 6.5rem; }
@@ -260,17 +259,18 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .place-info { grid-column: 1 / span 5; }
 .place-info h2 { margin-bottom: 1.5rem; }
 .place-info > p { max-width: 42ch; margin-bottom: 2rem; }
-.info > div {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr;
-  column-gap: 1rem;
-  align-items: baseline;
-  padding-block: 0.95rem;
-  border-top: 1px solid var(--rule);
+/* Coordonnées : un simple bloc d'adresse, sans filets ni soulignés */
+.coords { font-style: normal; }
+.coords p + p { margin-top: 1.4rem; }
+.coords .lines span { display: block; }
+.coords .big a {
+  display: block;
+  width: fit-content;
+  font: 500 clamp(1.3rem, 2vw, 1.7rem)/1.35 var(--serif);
+  text-decoration: none;
 }
-.info > div:last-child { border-bottom: 1px solid var(--rule); }
-.info dt { color: var(--muted); }
-.place-info .more { margin-top: 1.5rem; font-weight: 400; }
+.coords .big a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+.place-info .more { margin-top: 1.75rem; font-weight: 400; }
 /* Plan du quartier, dessiné à partir des données OpenStreetMap (rues réelles) */
 .place-map { grid-column: 7 / -1; margin: 0; }
 .place-map .plan { display: block; overflow: hidden; }
@@ -280,15 +280,8 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .quote { padding-bottom: var(--space); }
 .quote > .cols { align-items: start; }
 .quote-direct { grid-column: 1 / span 5; }
-.quote-direct .big a {
-  display: block;
-  width: fit-content;
-  font: 500 clamp(1.5rem, 2.6vw, 2.2rem)/1.3 var(--serif);
-  text-decoration: none;
-}
-.quote-direct .big a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
-.quote-direct .info { margin-top: 2rem; }
-.quote-direct .note { margin-top: 1.25rem; max-width: 40ch; color: var(--muted); }
+.quote-direct .coords .big a { font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: 1.3; }
+.quote-direct .note { margin-top: 1.5rem; max-width: 40ch; color: var(--muted); }
 .quote-form {
   grid-column: 7 / -1;
   padding: clamp(1.5rem, 3.2vw, 3rem);
@@ -339,16 +332,16 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 
 /* ---------- Pages intérieures ---------- */
 .page-head { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(2.75rem, 6vw, 4.75rem); }
-.page-head > .cols { align-items: end; }
+/* Hauteur réservée pour le chapeau le plus long : le titre tombe ainsi au même endroit
+   sur toutes les pages, quel que soit le nombre de lignes du chapeau. */
+.page-head { --lead-size: clamp(1.15rem, 1.65vw, 1.45rem); --lead-lines: 4; }
+.page-head > .cols { align-items: end; min-height: calc(var(--lead-size) * 1.38 * var(--lead-lines) + 0.45rem); }
 .page-head h1 { grid-column: 1 / span 7; }
 .page-head .lead {
   grid-column: 8 / -1;
   padding-bottom: 0.45rem;
-  font: 500 clamp(1.15rem, 1.65vw, 1.45rem)/1.38 var(--serif);
+  font: 500 var(--lead-size)/1.38 var(--serif);
 }
-.page-head .lead.plain { font: inherit; max-width: 46ch; }
-.page-head .lead.under { grid-column: 1 / -1; margin-top: 1rem; padding-bottom: 0; }
-.page-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin-top: 1.25rem; font: 400 1.0625rem/1.6 var(--sans); }
 
 /* Engagements : un visuel et un texte par engagement, en alternance */
 .chapter { padding-bottom: var(--space); }
@@ -359,30 +352,28 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 .chapter.flip .chapter-text { grid-column: 1 / span 4; }
 .chapter-text p { margin-top: 1.1rem; max-width: 36ch; }
 
-/* Prestations : un texte court, puis les photos */
+/* Prestations : les photos, puis un texte court */
 .service { padding-bottom: var(--space); scroll-margin-top: 6.5rem; }
-.service-head { align-items: start; margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem); }
-.service-head h2 { grid-column: 1 / span 5; }
-.service-body { grid-column: 7 / -1; padding-top: 0.35rem; }
+/* Le titre et le texte suivent les photos, sur les mêmes colonnes que l'en-tête de page */
+.service-head { align-items: start; margin-top: clamp(1.75rem, 3.5vw, 2.5rem); }
+.service-head h2 { grid-column: 1 / span 7; }
+.service-body { grid-column: 8 / -1; padding-top: 0.35rem; }
 .service-body p { max-width: 50ch; }
 .service-body .items { margin-top: 0.9rem; color: var(--muted); }
 
 /* Réalisations */
 .group { padding-bottom: var(--space); scroll-margin-top: 6.5rem; }
 .group h2 { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+.group-head h2 { margin-bottom: 0; }
 
 /* Notre histoire */
 .story-section { padding-bottom: var(--space); }
 .story { align-items: start; }
 .story-side { grid-column: 1 / span 4; }
 .story-text { grid-column: 6 / -1; }
-.story-text .opening {
-  font: 500 clamp(1.3rem, 2.15vw, 1.85rem)/1.3 var(--serif);
-  max-width: 22em;
-  margin-bottom: 1.5rem;
-}
 .story-text p { max-width: 52ch; }
 .story-text p + p { margin-top: 1.1rem; }
+.story-text .byline { margin-top: 1.5rem; }
 .story-text figure { margin-top: clamp(2rem, 4vw, 3.25rem); }
 .byline { color: var(--muted); }
 
@@ -430,8 +421,14 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 }
 
 /* ---------- Écrans intermédiaires : l'en-tête se resserre ---------- */
+@media (max-width: 1439px) {
+  .page-head { --lead-lines: 5; }
+}
 @media (max-width: 1180px) {
   .header-tel { display: none; }
+}
+@media (max-width: 1020px) {
+  .page-head { --lead-lines: 6; }
 }
 @media (max-width: 1080px) {
   .site-header .wrap { gap: 1.25rem; }
@@ -471,13 +468,20 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   .place-section, .service, .group { scroll-margin-top: 4.5rem; }
 
   .cols { display: block; }
-  .hero-aside { margin-top: 1.75rem; padding-bottom: 0; }
-  .hero-aside p { max-width: 46ch; }
+  /* Ouverture : le titre, le bouton et la photo d'abord ; le texte passe sous la photo
+     pour alléger le premier écran. */
+  .hero .wrap { display: flex; flex-direction: column; }
+  .hero-head, .hero-aside { display: contents; }
+  .hero-title { order: 1; }
+  .hero-aside .actions { order: 2; margin-top: 1.6rem; }
+  .hero figure { order: 3; margin-top: 2rem; }
+  .hero-aside > p:first-child { order: 4; margin-top: 1.75rem; max-width: 46ch; }
 
   .teaser-text { padding: 1.5rem 1.25rem 1.75rem; }
   .chapter-text { margin-top: 1.5rem; }
   .teaser-text p, .chapter-text p { max-width: 46ch; }
 
+  .page-head > .cols { min-height: 0; }
   .page-head .lead { margin-top: 1.5rem; padding-bottom: 0; max-width: 34em; }
   .service-body { margin-top: 1rem; padding-top: 0; }
 
@@ -488,9 +492,13 @@ figcaption strong { font-weight: 500; color: var(--ink); }
 
   .quote-form { margin-top: 2.75rem; }
 
+  /* Le numéro et le bouton restent à portée de pouce, mais seulement quand
+     aucun bouton de devis n'est déjà visible dans la page (voir site.js). */
   .call-bar {
     display: flex;
-    gap: 0.6rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     position: fixed;
     left: 0;
     right: 0;
@@ -499,10 +507,15 @@ figcaption strong { font-weight: 500; color: var(--ink); }
     padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
     background: var(--cream-light);
     border-top: 1px solid var(--rule);
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: transform 0.25s ease, visibility 0s linear 0.25s;
   }
-  .call-bar .btn { flex: 1; padding: 0.85rem 0.5rem; text-align: center; }
+  .call-bar.is-visible { transform: none; visibility: visible; transition: transform 0.25s ease; }
+  .call-bar .tel { font-weight: 500; text-decoration: none; }
+  .call-bar .btn { padding: 0.8rem 1.1rem; }
   /* Le pied de page garde de la place sous lui pour ne pas être masqué par la barre */
-  .has-bar .site-footer { padding-bottom: 6.5rem; }
+  .has-bar .site-footer { padding-bottom: 5.5rem; }
 
   .site-footer .cols { display: grid; grid-template-columns: 1fr 1fr; row-gap: 2.25rem; }
   .footer-brand { grid-column: 1 / -1; }
@@ -516,9 +529,9 @@ figcaption strong { font-weight: 500; color: var(--ink); }
   .row { display: block; }
   .row figure + figure { margin-top: 1.5rem; }
   .fields-2 { display: block; }
-  .info > div { grid-template-columns: 6.25rem 1fr; }
   /* Sur petit écran, le plan se resserre autour de l'atelier pour rester lisible */
   .place-map .plan { aspect-ratio: 1 / 1; }
   .place-map svg { width: 170%; max-width: none; margin-left: calc(50% - 170% * 0.572); margin-top: calc(50% - 170% * 0.38); }
   .place-map .d-only { display: none; }
 }
+@media (prefers-reduced-motion: reduce) { .call-bar, .call-bar.is-visible { transition: none; } }
